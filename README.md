@@ -48,3 +48,55 @@ console.log(absoluteValueSumMinimization([2,4,7,6,6]))   //7
 console.log(absoluteValueSumMinimization([2,4,7,6,6,8])) //7
 
 ```
+
+##### Add
+
+1. Write a function that returns the sum of two numbers.
+2. Write a function that returns the sum of all numbers regardless of # of params.
+
+**Example**
+
+For param1 = 1 and param2 = 2, the output should be
+add(param1, param2) = 3.
+
+**Hints**
+-   Arithmetic Operators
+-   Rest Operator
+-   forEach()
+
+**Input/Output**
+
+- **[time limit] 4000ms (js)**
+- **[input] integer param1**
+
+Guaranteed constraints:
+
+-100 ≤ param1 ≤ 1000.
+
+**[input] integer param2**
+
+Guaranteed constraints:
+-100 ≤ param2 ≤ 1000.
+
+**[output] integer**
+
+The sum of the two inputs.
+
+```typeScript
+function add(number1: number, number2: number){
+  return number1 + number2;
+}
+
+function add2(...param1: number[]):number {
+  let total = 0;
+  
+  param1.forEach((num) => {
+    total += num;  
+  });
+  
+  return total;
+}
+
+console.log(add2(1,2,3,4,5));
+
+```
