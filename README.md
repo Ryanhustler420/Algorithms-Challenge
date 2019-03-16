@@ -250,3 +250,74 @@ console.log(adjacentElementsProduct([3,6,-2,-5,7,3])); //21
 
 ```
 
+##### All Longest Strings
+
+Given an array of strings, return another array containing all of its longest strings.
+
+**Example**
+
+For inputArray = ["aba", "aa", "ad", "vcd", "aba"], the output should be
+allLongestStrings(inputArray) = ["aba", "vcd", "aba"].
+
+**Hints**
+-   None
+
+**Input/Output**
+
+- **[time limit] 4000ms (js)**
+- **[input] array.string inputArray**
+
+A non-empty array.
+
+*Guaranteed constraints:*
+
+1 ≤ inputArray.length ≤ 10,
+
+1 ≤ inputArray[i].length ≤ 10.
+
+- **[output] array.string**
+
+Array of the longest strings, stored in the same order as in the inputArray.
+
+```typeScript
+  
+  // plain vanilla JavaScript
+  const inputArray = ["aba", "aa", "ad", "vcd", "aba"];
+
+/*
+  let newArray = [];
+  newArray.push(inputArray[0]);
+
+  for( let i = 1; i < inputArray.length; i++) {
+    if(newArray.length > 0) {
+        if(inputArray[i].length > newArray[newArray.length-1].length){
+            newArray = [];
+              newArray.push(inputArray[i]);
+          }else if(inputArray[i].length === newArray[newArray.length-1].length){
+            newArray.push(inputArray[i]);
+          }
+      }
+  }
+
+  console.log(newArray);
+*/
+
+  function allLongestStrings(inputArray: string[]): string[] {
+      let longestLength = 0;
+      const longestWords = [];
+
+      inputArray.forEach((word: string) => {
+        longestLength = longestLength < word.length ? word.length : longestLength;
+      });
+
+      inputArray.forEach((word: string) => {
+        if(word.length === longestLength){
+          longestWords.push(word);
+        }
+      });
+
+      return longestWords;
+  }
+
+  console.log(allLongestStrings(inputArray))
+```
