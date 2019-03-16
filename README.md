@@ -155,3 +155,49 @@ function addBorder(picture: string[]): any {
 console.log(addBorder(["abc","ded"])); // ["*****","*abc*","*ded*","*****"]
 
 ```
+
+##### Add Two Digits
+
+You are given a two-digit integer n. Return the sum of its digits.
+
+**Example**
+
+For n = 29, the output should be
+addTwoDigits(n) = 11.
+
+**Hint**
+-   split()
+-   parseInt()
+-   toString()
+-   reduce()
+
+**Input/Output**
+
+- **[execution time limit] 4 seconds (js)**
+- **[input] integer n**
+
+    A positive two-digit integer.
+
+*Guaranteed constraints:*
+
+10 ≤ n ≤ 99.
+
+- **[output] integer**
+
+    The sum of the first and second digits of the input number.
+
+
+```typeScript
+
+function addTwoDigits(n: string): number {
+ 	/* return [...n.toString()].reduce((acc, cur) => {
+   		return parseInt(acc) + parseInt(cur);
+    });
+    */
+  	return parseInt(n[0]) + parseInt(n[1]);
+}
+
+console.log(addTwoDigits(29)); // 11
+
+
+```
