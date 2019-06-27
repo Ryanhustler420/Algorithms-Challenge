@@ -321,3 +321,32 @@ Array of the longest strings, stored in the same order as in the inputArray.
 
   console.log(allLongestStrings(inputArray))
 ```
+
+##### Bishop And Pawn
+
+```js
+
+const bishop = 'a1';
+const pawn = 'c3';
+
+const board = {
+    "a": 1,
+    "b": 2,
+    "c": 3,
+    "d": 4,
+    "e": 5,
+    "f": 6,
+    "g": 7,
+    "h": 8,
+};
+
+const bishopX = board[bishop[0]];
+const bishopY = parseInt(bishop[1]);
+const pawnX = board[pawn[0]];
+const pawnY = parseInt(pawn[1]);
+
+if(bishopX + bishopY === pawnX + pawnY || bishopX + pawnY === pawnX + bishopY){
+    console.log(true);
+}
+
+```
