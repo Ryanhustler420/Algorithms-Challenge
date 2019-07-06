@@ -387,3 +387,18 @@ function boxBlur(image){
 boxBlur([[1,1,1],[1,7,1],[1,1,1]]); /*? */
 
 ```
+
+##### candies
+
+```js
+
+function candies(nChild, nCandy) {
+    const candy = Math.floor(nCandy / 3);
+
+    return candy * nChild;
+}
+
+console.log(candies(3, 10));
+
+
+```
