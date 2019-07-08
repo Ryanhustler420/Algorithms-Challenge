@@ -402,3 +402,19 @@ console.log(candies(3, 10));
 
 
 ```
+
+##### Case Insensitive Palindrome
+
+```js
+
+const string = 'Aabaa';
+
+const reversed = [...string.toLowerCase()].reverse().join(''); /*? */
+
+if(string.toLowerCase() == reversed) {
+    console.log('yup');
+}else {
+    console.log('nop');
+}
+
+```
