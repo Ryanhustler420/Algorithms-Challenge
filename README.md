@@ -436,7 +436,20 @@ console.log(centuryFromYear(1905));
 console.log(centuryFromYear(1700));
 console.log(centuryFromYear(2019));
 
-
-
 ````
 
+##### Character Parity
+
+```js
+function characterParity(symbol) {
+    if(!isNaN(symbol)){
+        return (parseInt(symbol) % 2 === 0) ? 'even' : 'odd'; 
+    }
+    return 'not a digit';
+}
+
+console.log(characterParity('2'));
+
+
+
+```
