@@ -481,3 +481,21 @@ function chessBoardCellColor(cell1, cell2) {
 
 
 ```
+
+##### Chunky Monkey
+
+```js
+
+function chunkyMonkey(array, size) {
+    let newArray = [];
+    for (let index = 0; index < array.length - size; index+=size) {
+        newArray.push(array.slice(index, size)); /*? */
+    }
+    newArray.push(array.slice(size)); /*? */
+    return newArray;
+}
+
+chunkyMonkey(["a","b","c","d"], 2); /*? */
+chunkyMonkey([0,1,2,3,4,5], 4); /*? */
+
+```
