@@ -499,3 +499,18 @@ chunkyMonkey(["a","b","c","d"], 2); /*? */
 chunkyMonkey([0,1,2,3,4,5], 4); /*? */
 
 ```
+
+##### Circle of Numbers
+
+```js
+function circleOfNumbers(n, firstnumber) {
+    const array = [];
+    times = n;
+    while(times--){
+        array.push(firstnumber++);
+    }
+    return array[Math.floor(n/2)];
+}
+
+circleOfNumbers(10, 2); /*? */
+```
