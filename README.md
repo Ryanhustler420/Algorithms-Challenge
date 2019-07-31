@@ -586,3 +586,17 @@ console.log(commonCharacterCount('aabcc','adcaa'));
 
 
 ```
+
+##### Compare Integers
+
+```js
+
+function compareIntegers(a,b) {
+  return parseInt(a) > parseInt(b) ? 'greater' " parseInt(a) < parseInt(b) ? 'less' : 'equal'
+}
+
+compareIntegers('12', '13'); /*/ less
+compareIntegers('875', '799'); /*/ greater
+compareIntegers('1000', '1000'); /*/ equal
+
+```
