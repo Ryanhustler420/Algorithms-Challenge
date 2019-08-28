@@ -638,3 +638,16 @@ console.log (composeRange (number));
 // [ '-1->2', '6->7', '9' ]
 
 ```
+
+##### Confirm Ending
+
+```js
+
+function confirmEnding (str, target) {
+  const start = str.length - target.length;
+  return str.substr(start) === target;
+}
+
+console.log(confirmEnding("Abstraction","action")); /*?*/ true
+console.log(confirmEnding("Open sesame","pen")); /*?*/ false
+```
